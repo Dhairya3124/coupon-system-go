@@ -8,13 +8,13 @@ A robust and concurrent coupon management system built with Go, featuring cachin
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
 │    API      │     │   Service   │     │ Repository  │
-│  (Gin)      │────▶│   Layer     │────▶│   (GORM)    │
+│  (Chi)      │────▶│   Layer     │────▶│   (GORM)    │
 └─────────────┘     └─────────────┘     └─────────────┘
        │                   │                   │
        │                   │                   │
        ▼                   ▼                   ▼
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Request    │     │    Cache    │     │  SQLite DB  │
+│  Request    │     │    Cache    │     │  Postgres DB│
 │ Validation  │     │   (LRU)     │     │             │
 └─────────────┘     └─────────────┘     └─────────────┘
 ```
